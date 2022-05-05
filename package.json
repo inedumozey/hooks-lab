@@ -1,24 +1,35 @@
 {
-  "name": "click-opacity",
+  "name": "@mozeyinedu/hooks-lab",
   "version": "1.0.0",
-  "description": "opacity on click",
-  "main": "index.js",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "source": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "https://github/inedumozey/click-opacity.git"
+    "url": "git+https://github.com/inedumozey/hooks-lab.git"
   },
-  "bugs": {"url": "https://github/inedumozey/click-opacity.git"},
   "keywords": [
-    "opacity",
-    "btn",
-    "button",
-    "react",
-    "js",
-    "hook"
+    "hooks, react-hooks, hooks-lab mozeyinedu inedumozey mozey"
   ],
   "author": "mozeyinedu",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inedumozey/hooks-lab/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.5",
+    "react": "^18.1.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0"
+  }
 }
