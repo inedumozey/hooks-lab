@@ -8,31 +8,30 @@ hooks-lab is a react package that houses several react hooks such as clickOpacit
 ```
 
 #### clickOpacity
-clickOpacity receives an optional argument to set the opacity.
-Behind the scene, the default argment is 0.4
+
+* clickOpacity receives an optional argument to set the opacity.
+* Behind the scene, the default argument is 0.4.
+* It returns a snap function which binds the button to the clickOpacity by passing the button ref as argument to the function
+* The div should be styled as a real button for this functionality to become visible
 
 ```
-import { clickOpacity } from '@mozeyinedu/hooks-lab'
+  import React, {useRef} from 'react';
+  import { clickOpacity } from '@mozeyinedu/hooks-lab'
 
-function App() {
-  const { add, remove } = clickOpacity(.5);
-  const btnRef = useRef()
- 
-  return (
-      <div
-        ref={btnRef}
-        onMouseDown={()=>add(btnRef.current)}
-        onMouseUp={()=>remove(btnRef.current)}
-        onMouseLeave={()=>remove(btnRef.current)}
-      >
-      Click Me
-    </div>
-  );
-}
 
-export default App;
+  function App() {
+    const { snap } = clickOpacity();
+    const btnRef = useRef(null)
+  
+    return (
+        <div ref={btnRef} {...snap(btnRef.current) }>Click Me</div>
+    );
+  }
+
+  export default App;
 
 ```
------------------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
-##### Stay tuned for more components
+
+##### Stay tuned for more hooks

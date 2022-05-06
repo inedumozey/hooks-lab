@@ -1,4 +1,4 @@
-import clickOpacity from "./lib/clickopacity/clickOpacity";
+import clickOpacity from './lib/clickopacity/clickOpacity';
 
 export {
     clickOpacity

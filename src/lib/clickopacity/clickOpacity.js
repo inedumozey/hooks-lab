@@ -1,18 +1,49 @@
-const clickopacity =(opacity)=>{
 
-    const add = (el)=>{
-        if(el){
-            el.style.opacity = (opacity ? opacity : .4)
+const clickOpacity =(opacity)=>{
+
+    const snap=(el)=>{
+
+        const add = ()=>{
+            if(el){
+                el.style.opacity = (opacity ? opacity : .4)
+            }
+        }
+    
+        const remove = ()=>{
+            if(el){
+                el.style.opacity = 1
+            }
+        };
+
+        return {
+            onMouseDown: ()=>add(),
+            onMouseUp: ()=>remove(),
+            onMouseLeave: ()=>remove(),
         }
     }
 
-    const remove = (el)=>{
-        if(el){
-            el.style.opacity = 1
-        }
-    };
+    return { snap }
 
-    return { add, remove }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 }
 
-export default clickopacity
+
+export default clickOpacity
