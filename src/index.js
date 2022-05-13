@@ -1,5 +1,5 @@
-import clickOpacity from './lib/clickopacity/clickOpacity';
+import UseSnap from './lib/snap/snap';
 
 export {
-    clickOpacity
+    UseSnap
 }
