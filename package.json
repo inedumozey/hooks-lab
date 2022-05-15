@@ -1,6 +1,6 @@
 {
   "name": "@mozeyinedu/hooks-lab",
-  "version": "2.0.1",
+  "version": "3.0.2",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -10,10 +10,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/inedumozey/hooks-lab.git"
+    "url": "https://github.com/inedumozey/hooks-lab.git"
   },
   "keywords": [
-    "hooks, react-hooks, hooks-lab mozeyinedu inedumozey mozey"
+    "mozeyinedu",
+    "inedumozey",
+    "mozey",
+    "inedu",
+    "moses",
+    "inedu",
+    "hooks",
+    "react-hooks",
+    "hooks-lab",
+    "useSnap",
+    "snap",
+    "button",
+    "useToggle",
+    "toggle",
+    "toggleState",
+    "toggle state"
   ],
   "author": "mozeyinedu",
   "license": "MIT",
@@ -26,7 +41,6 @@
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.5",
-    "react": "^18.1.0",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
   },

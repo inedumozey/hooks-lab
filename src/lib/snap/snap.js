@@ -1,4 +1,4 @@
-const UseSnap = (opacity)=>{
+const useSnap = (opacity)=>{
 
     const snap=()=>{
 
@@ -24,4 +24,4 @@ const UseSnap = (opacity)=>{
     return { snap }      
 }
 
-export default UseSnap
+export default useSnap

@@ -1,5 +1,7 @@
-import UseSnap from './lib/snap/snap';
+import useSnap from './lib/snap/snap';
+import useToggle from './lib/toggles/toggles';
 
 export {
-    UseSnap
+    useSnap,
+    useToggle
 }
