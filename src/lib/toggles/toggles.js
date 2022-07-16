@@ -1,4 +1,4 @@
-import React, {useState, useLayoutEffect} from 'react';
+import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
 
 const useToggle=()=>{
     const [light, setLight] = useState(true);
@@ -20,7 +20,7 @@ const useToggle=()=>{
         setToggleState(false)
     }
   
-    useLayoutEffect(()=>{
+    useIsomorphicLayoutEffect(()=>{
         if(localStorage.getItem('toggleState') !== null){
             setToggleState(localStorage.getItem('toggleState') == "true" ? true : false);
         } 
