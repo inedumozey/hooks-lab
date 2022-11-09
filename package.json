@@ -1,12 +1,13 @@
 {
   "name": "@mozeyinedu/hooks-lab",
-  "version": "4.0.0",
+  "version": "5.0.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "source": "src/index.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
