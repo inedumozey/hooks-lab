@@ -98,8 +98,6 @@ function App() {
 
 export default App;
 
-
-
 ```
 
 
@@ -107,4 +105,54 @@ export default App;
 -----------------------------------------------------------------------
 
 
-##### Stay tuned for more hooks
+# Version > 5.0.3
+
+### useToggle
+
+
+```
+import { useToggle } from '@mozeyinedu/hooks-lab';
+
+function App() {
+    const [ toggle, useToggle ] = useToggle();
+
+    const style = {
+        width: '300px',
+        height: '300px',
+        border: '1px solid',
+        transition: 'all .3s',
+        background: toggle ? "#dfdfdf" : '#555',
+        color: toggle ? "#000" : '#fff'
+    };
+    
+    return (
+        <div onClick={useToggle} style={style}>{toggle ? 'Dark Theme' : 'Light Theme'}</div>
+        
+    );
+}
+
+export default App;
+
+```
+
+### useTheme
+To implement dark/light theme
+
+```
+  import { useTheme } from '@mozeyinedu/hooks-lab';
+
+   const themColors = {
+      light: {bg: '#fff', text: '#000'},
+      dark: {bg: '#000', text: '#fff'}
+  }
+
+  function App() {
+      const [colors, setColors] = useTheme({ light: themeColors.light, dark: themeColors.dark })
+      return (
+          <div onClick={setColors} style={{background: colors.bg, color: colors.text}}</div>
+          
+      );
+  }
+
+export default App;
+```

@@ -1,37 +1,37 @@
 import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
-import {useState} from 'react'
+import { useState } from 'react'
 
-const useToggle=()=>{
+const useToggle = () => {
     const [light, setLight] = useState(true);
-    const [toggleState, setToggleState] = useState(true);
+    const [toggle, setToggleState] = useState(true);
 
-    const toggle =()=>{
+    const setToggle = () => {
         setLight(!light);
 
-        if(localStorage.getItem('toggleState') == null){
-            localStorage.setItem('toggleState', false);
-        }else{
-            if(localStorage.getItem('toggleState') == "true"){
-                localStorage.setItem('toggleState', false)
-            }else{
-                localStorage.setItem('toggleState', true)
+        if (localStorage.getItem('toggle') == null) {
+            localStorage.setItem('toggle', false);
+        } else {
+            if (localStorage.getItem('toggle') == "true") {
+                localStorage.setItem('toggle', false)
+            } else {
+                localStorage.setItem('toggle', true)
             }
         }
 
         setToggleState(false)
     }
-  
-    useIsomorphicLayoutEffect(()=>{
-        if(localStorage.getItem('toggleState') !== null){
-            setToggleState(localStorage.getItem('toggleState') == "true" ? true : false);
-        } 
-        
+
+    useIsomorphicLayoutEffect(() => {
+        if (localStorage.getItem('toggle') !== null) {
+            setToggleState(localStorage.getItem('toggle') == "true" ? true : false);
+        }
+
     }, [light]);
 
-    return {
+    return [
         toggle,
-        toggleState
-    }
+        setToggle
+    ]
 }
 
 export default useToggle;
