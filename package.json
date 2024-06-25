@@ -1,7 +1,7 @@
 {
   "name": "@mozeyinedu/hooks-lab",
-  "version": "7.0.1",
-  "description": "Contains 3 react components, these will grow in the future",
+  "version": "7.0.2",
+  "description": "",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "files": [
@@ -38,9 +38,9 @@
   "author": "mozeyinedu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/inedumozey/react-lab/issues"
+    "url": "https://github.com/inedumozey/hook-lab/issues"
   },
-  "homepage": "https://github.com/inedumozey/react-lab/issues",
+  "homepage": "https://github.com/inedumozey/hook-lab/issues",
   "devDependencies": {
     "@types/node": "^20.8.0",
     "@types/react": "^18.2.28",
